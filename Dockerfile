@@ -32,8 +32,7 @@ RUN cd /install && \
   rm -r /tmp/* \
   rm -rf /root/.cache/R
 
-COPY app.R functions.R config.yml /app/
-COPY tests /app/tests
+COPY app /app/
 
 RUN chmod -R 655 /app
 RUN useradd -m appuser
